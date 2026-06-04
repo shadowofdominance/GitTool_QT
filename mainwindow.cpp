@@ -15,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+    ui->fileChangesTreeWidget->setHeaderLabels(
+        QStringList() << "Status" << "File"
+        );
 }
 
 void MainWindow::on_selectProjectBtn_clicked()

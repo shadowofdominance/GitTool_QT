@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>909</width>
-    <height>590</height>
+    <width>1014</width>
+    <height>659</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -55,9 +55,20 @@
         </item>
         <item>
          <widget class="QTreeWidget" name="fileChangesTreeWidget">
+          <property name="headerHidden">
+           <bool>false</bool>
+          </property>
+          <property name="columnCount">
+           <number>2</number>
+          </property>
           <column>
            <property name="text">
             <string notr="true">1</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string notr="true">2</string>
            </property>
           </column>
          </widget>
