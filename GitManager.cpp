@@ -25,3 +25,13 @@ QString GitManager::getStatus(QString path){
 
     return output;
 }
+QString GitManager::fileStatus(QString fileStatus){
+    if(fileStatus == "M")
+        return "Modified";
+    if(fileStatus == "D")
+        return "Deleted";
+    if(fileStatus == "??")
+        return "Untracked";
+
+    return fileStatus;
+}

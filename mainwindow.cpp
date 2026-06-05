@@ -10,14 +10,14 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->fileChangesTreeWidget->setHeaderLabels(
+        QStringList() << "Status" << "File"
+        );
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    ui->fileChangesTreeWidget->setHeaderLabels(
-        QStringList() << "Status" << "File"
-        );
 }
 
 void MainWindow::on_selectProjectBtn_clicked()
@@ -62,11 +62,12 @@ void MainWindow::on_commitBtn_clicked()
 
 void MainWindow::updateFileTree(QString status)
 {
+    GitManager gitManager;
+
     ui->fileChangesTreeWidget->clear();
     QStringList lines = status.split("\n", Qt::SkipEmptyParts);
 
     for(const QString & line : lines){
-
 
         if(line.isEmpty())
             continue;
