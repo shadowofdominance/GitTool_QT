@@ -73,22 +73,36 @@
           </column>
          </widget>
         </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <widget class="QLabel" name="commitMessageLabel">
-          <property name="text">
-           <string>Commit Message:</string>
-          </property>
-          <property name="wordWrap">
-           <bool>false</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="commitMessageLineEdit"/>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="commitMessageLabel">
+            <property name="text">
+             <string>Commit Message:</string>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="commitMessageLineEdit"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="stageAllButton">
+            <property name="text">
+             <string>Stage All</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="commitBtn">
+            <property name="text">
+             <string>Commit Updates</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </item>
@@ -97,13 +111,6 @@
         <property name="spacing">
          <number>20</number>
         </property>
-        <item>
-         <widget class="QPushButton" name="commitBtn">
-          <property name="text">
-           <string>Commit Updates</string>
-          </property>
-         </widget>
-        </item>
         <item>
          <widget class="QPushButton" name="pushBtn">
           <property name="text">

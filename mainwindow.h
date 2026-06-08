@@ -25,6 +25,8 @@ private slots:
 
     void on_commitBtn_clicked();
 
+    void on_stageAllButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

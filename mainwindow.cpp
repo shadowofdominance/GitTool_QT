@@ -86,3 +86,9 @@ void MainWindow::updateFileTree(QString status)
     }
 }
 
+
+void MainWindow::on_stageAllButton_clicked()
+{
+
+}
+

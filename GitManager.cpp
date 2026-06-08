@@ -25,6 +25,7 @@ QString GitManager::getStatus(QString path){
 
     return output;
 }
+
 QString GitManager::fileStatus(QString fileStatus){
     if(fileStatus == "M")
         return "Modified";
@@ -34,4 +35,34 @@ QString GitManager::fileStatus(QString fileStatus){
         return "Untracked";
 
     return fileStatus;
+}
+
+bool GitManager::stageAllFiles(QString path){
+    QProcess process;
+
+    process.setWorkingDirectory(path);
+
+    process.start("git", QStringList() << "add" << ".");
+
+    process.waitForFinished();
+
+    return process.exitCode() == 0;
+}
+
+bool GitManager::commitChanges(QString path, QString commitMessage){
+    QProcess process;
+
+    process.setWorkingDirectory(path);
+
+    process.start(
+        "git",
+        QStringList()
+            << "commit"
+            << "-m"
+            << commitMessage
+        );
+
+    process.waitForFinished();
+
+    return process.exitCode() == 0;
 }

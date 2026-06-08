@@ -9,9 +9,10 @@ public:
     bool isGitRepo(QString path);
     QString getStatus(QString path);
     void stageFile(QString file);
-    void commit(QString message);
+    bool commitChanges(QString path, QString message);
     void push();
     QString fileStatus(QString filestatus);
+    bool stageAllFiles(QString path);
 };
 
 #endif // GITMANAGER_H
