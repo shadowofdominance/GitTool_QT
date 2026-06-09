@@ -66,3 +66,15 @@ bool GitManager::commitChanges(QString path, QString commitMessage){
 
     return process.exitCode() == 0;
 }
+
+bool GitManager::pushChanges(QString path){
+    QProcess process;
+
+    process.setWorkingDirectory(path);
+
+    process.start("git", QStringList() << "push");
+
+    process.waitForFinished();
+
+    return process.exitCode() == 0;
+}
