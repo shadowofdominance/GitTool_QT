@@ -10,9 +10,10 @@ public:
     QString getStatus(QString path);
     void stageFile(QString file);
     bool commitChanges(QString path, QString message);
-    void push();
+    bool pushChanges(QString path);
     QString fileStatus(QString filestatus);
     bool stageAllFiles(QString path);
+
 };
 
 #endif // GITMANAGER_H

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 
+#include "GitManager.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -29,5 +30,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QString currentProjectPath;
+
+    GitManager gitManager;
 };
 #endif // MAINWINDOW_H
